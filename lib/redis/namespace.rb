@@ -53,6 +53,7 @@ class Redis
     #   :all
     #     Add the namespace to all elements returned, e.g.
     #       key1 key2 => namespace:key1 namespace:key2
+    Redis.sadd_returns_boolean = true
     NAMESPACED_COMMANDS = {
       "append"           => [ :first ],
       "bitcount"         => [ :first ],
